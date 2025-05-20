@@ -1,0 +1,17 @@
+cloud:
+  aws:
+    credentials:
+      access-key: ${ACCESS_KEY}
+      secret-key: ${SECRET_KEY}
+    region:
+      static: ap-northeast-2  # ??? ??
+    s3:
+      bucket: filedemobuket   # ?? ??
+    stack:
+      auto: false
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB # ???? ? ?? ?? ??? ?? ??. ?? 1MB
+      max-request-size: 10MB #multipart/form-data ??? ?? ?? ??. ?? 10MB
