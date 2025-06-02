@@ -18,6 +18,7 @@ public class CsvValidator implements FileValidatorStrategy{
             String headerLine = reader.readLine();
             if (headerLine == null) {
                 throw new IllegalArgumentException("사용자 ID가 비어 있습니다.");
+
             }
 
             String[] headers = headerLine.split(",");

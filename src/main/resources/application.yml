@@ -6,11 +6,25 @@ cloud:
     region:
       static: ap-northeast-2
     s3:
-      bucket: file-demo-application
+      bucket: File-demo-application
     stack:
       auto: false
+file:
+  temp:
+    directory: C:\\uploadTest
 
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/chatting-total
+    username: chatUser
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+
   servlet:
     multipart:
       enabled: true
